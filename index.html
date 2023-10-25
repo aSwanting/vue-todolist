@@ -15,7 +15,11 @@
         <h1>ToDo List</h1>
 
         <ul>
-            <li>Task 1</li>
+
+            <li v-for="task in tasks" :class="{'task-done': task.taskDone}">
+                {{task.taskName}}
+            </li>
+            
         </ul>
 
     </div>

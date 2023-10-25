@@ -6,7 +6,7 @@ createApp({
         return {
 
             tasks: [
-                
+
                 {
                     taskName: "Task 1",
                     taskDone: false,
@@ -14,7 +14,7 @@ createApp({
 
                 {
                     taskName: "Task 2",
-                    taskDone: false,
+                    taskDone: true,
                 },
 
                 {
@@ -22,7 +22,8 @@ createApp({
                     taskDone: false,
                 },
 
-            ]
+            ],
+            
         }
     },
     methods: {
