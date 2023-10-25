@@ -46,10 +46,20 @@ html {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .todo-list li span {
     cursor: pointer;
+    color: rgb(177, 84, 84);
+}
+
+.todo-list li:hover {
+    border: 2px solid rgb(118, 128, 123);
+}
+
+.todo-list li span:hover {
+    transform: scale(1.1);
 }
 
 .task-done {
@@ -81,7 +91,8 @@ html {
 .task-input-button {
     flex-basis: 20%;
     cursor: pointer;
-    
+    background-color: rgb(245, 245, 245);
+
 }
 
 .task-input-button:hover {

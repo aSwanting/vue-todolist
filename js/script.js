@@ -9,17 +9,17 @@ createApp({
             tasks: [
 
                 {
-                    taskName: "Task 1",
+                    taskName: "Buy some chicken",
                     taskDone: false,
                 },
 
                 {
-                    taskName: "Task 2",
-                    taskDone: true,
+                    taskName: "Marinade chicken in lemon and mustard",
+                    taskDone: false,
                 },
 
                 {
-                    taskName: "Task 3",
+                    taskName: "Cook chicken",
                     taskDone: false,
                 },
 
@@ -52,6 +52,11 @@ createApp({
             this.tasks.splice(index, 1)
             console.log("task removed")
         },
+
+        toggleTaskStatus(index) {
+            this.tasks[index].taskDone = !this.tasks[index].taskDone
+            
+        }
 
     },
 

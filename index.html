@@ -28,9 +28,9 @@
 
                 <ul v-if="tasks.length > 0">
 
-                    <li v-for="(task, index) in tasks" :key="task.taskName" :class="{'task-done': task.taskDone}">
+                    <li v-for="(task, index) in tasks" :key="task.taskName" :class="{'task-done': task.taskDone}" @click="toggleTaskStatus(index)">
                         {{task.taskName}}
-                        <span @click="removeTask(index)"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <span @click.stop="removeTask(index)"><i class="fa-regular fa-circle-xmark"></i></span>
                     </li>
 
                 </ul>
