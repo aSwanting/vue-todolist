@@ -22,7 +22,7 @@
                 <h1>ToDo List</h1>
 
                 <div class="task-input">
-                    <input class="task-input-form" type="text" placeholder="New Task" v-model="newTaskName">
+                    <input class="task-input-form" type="text" placeholder="New Task" v-model="newTaskName" @keydown.enter="addTask(newTaskName)">
                     <button class="task-input-button" @click="addTask(newTaskName)">add</button>
                 </div>
 
