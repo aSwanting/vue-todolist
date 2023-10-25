@@ -2,6 +2,7 @@
 const { createApp } = Vue
 
 createApp({
+    
     data() {
         return {
 
@@ -23,13 +24,21 @@ createApp({
                 },
 
             ],
-            
+
         }
     },
+
     methods: {
+        removeTask(index) {
+
+            this.tasks.splice(index, 1)
+            console.log("task removed")
+        }
 
     },
+
     mounted() {
         console.log("It's Alive!")
     }
+
 }).mount('#app')
