@@ -12,15 +12,23 @@
 
     <div id="app">
 
-        <h1>ToDo List</h1>
+        <div class="container">
 
-        <ul>
+            <div class="todo-list">
 
-            <li v-for="task in tasks" :class="{'task-done': task.taskDone}">
-                {{task.taskName}}
-            </li>
-            
-        </ul>
+                <h1>ToDo List</h1>
+
+                <ul>
+
+                    <li v-for="task in tasks" :class="{'task-done': task.taskDone}">
+                        {{task.taskName}}
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
 
     </div>
 
