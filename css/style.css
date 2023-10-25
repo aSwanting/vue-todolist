@@ -69,6 +69,7 @@ html {
 .task-input {
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -77,10 +78,11 @@ html {
     border: 1px solid grey;
     border-radius: 10px;
     transition: 200ms all;
+    flex-grow: 1;
+    min-width: 0;
 }
 
-.task-input-form {
-    flex-basis: 80%;
+.task-input-form {    
     outline: 2px solid transparent;
 }
 
@@ -88,10 +90,9 @@ html {
     outline: 2px solid rgb(77, 141, 141);
 }
 
-.task-input-button {
-    flex-basis: 20%;
+.task-input-button {   
     cursor: pointer;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
 
 }
 

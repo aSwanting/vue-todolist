@@ -42,7 +42,9 @@ createApp({
                 this.invalidFormEntry = false
 
             } else {
+
                 this.invalidFormEntry = true
+                
             }
 
         },
