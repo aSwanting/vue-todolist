@@ -22,8 +22,8 @@
                 <h1>ToDo List</h1>
 
                 <div class="task-input">
-                    <input class="task-input-form" type="text" placeholder="New Task" v-model="newTask.taskName">
-                    <button class="task-input-button" @click="addTask()">add</button>
+                    <input class="task-input-form" type="text" placeholder="New Task" v-model="newTaskName">
+                    <button class="task-input-button" @click="addTask(newTaskName)">add</button>
                 </div>
 
                 <ul v-if="tasks.length > 0">

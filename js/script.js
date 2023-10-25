@@ -25,10 +25,7 @@ createApp({
 
             ],
 
-            newTask: {
-                taskName:"",
-                taskDone: false,
-            }
+            newTaskName: ""
 
         }
     },
@@ -36,8 +33,14 @@ createApp({
     methods: {
 
         addTask() {
-     
-            this.tasks.push(this.newTask)
+
+            if (this.newTaskName) {
+
+                let newTaskName = this.newTaskName
+                this.tasks.push({ taskName: newTaskName, taskDone: false })
+                this.newTaskName = ""
+
+            }
 
         },
 
