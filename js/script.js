@@ -34,12 +34,11 @@ createApp({
 
         addTask() {
 
-            if (this.newTaskName) {
+            if (this.newTaskName) {    
 
-                let newTaskName = this.newTaskName
-                this.tasks.push({ taskName: newTaskName, taskDone: false })
+                this.tasks.push({ taskName: this.newTaskName, taskDone: false })
                 this.newTaskName = ""
-
+                
             }
 
         },
