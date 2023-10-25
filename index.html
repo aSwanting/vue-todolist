@@ -23,7 +23,7 @@
 
                 <div class="task-input">
                     <input class="task-input-form" type="text" placeholder="New Task" v-model="newTask.taskName">
-                    <button class="task-input-button" @click="addTask(newTask.taskName)">add</button>
+                    <button class="task-input-button" @click="addTask()">add</button>
                 </div>
 
                 <ul v-if="tasks.length > 0">

@@ -35,11 +35,10 @@ createApp({
 
     methods: {
 
-        addTask(foo) {
-            console.log("task added", foo)
-            console.log(this.tasks)
+        addTask() {
+     
             this.tasks.push(this.newTask)
-            console.log(this.tasks)
+
         },
 
         removeTask(index) {
