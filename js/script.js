@@ -25,7 +25,8 @@ createApp({
 
             ],
 
-            newTaskName: ""
+            newTaskName: "",            
+            invalidFormEntry: false,
 
         }
     },
@@ -38,7 +39,10 @@ createApp({
 
                 this.tasks.push({ taskName: this.newTaskName, taskDone: false })
                 this.newTaskName = ""
-                
+                this.invalidFormEntry = false
+
+            } else {
+                this.invalidFormEntry = true
             }
 
         },

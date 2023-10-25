@@ -89,3 +89,7 @@ html {
     color: white;
     border-color: currentColor;
 }
+
+.task-input-form.invalid {
+    outline: 2px solid rgb(206, 29, 29);
+}
