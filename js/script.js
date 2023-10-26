@@ -25,8 +25,9 @@ createApp({
 
             ],
 
-            newTaskName: "",            
+            newTaskName: "",
             invalidFormEntry: false,
+            underMinChars: false,
 
         }
     },
@@ -35,7 +36,15 @@ createApp({
 
         addTask() {
 
-            if (this.newTaskName) {    
+            // Check String Length (better way using array functions is possible)
+            let stringLength = 0
+            for (charNum in this.newTaskName) { 
+                if (this.newTaskName[charNum] != " ") { 
+                    stringLength++ 
+                } }
+
+            // If valid, push to array
+            if (this.newTaskName && stringLength >= 5) {
 
                 this.tasks.push({ taskName: this.newTaskName, taskDone: false })
                 this.newTaskName = ""
@@ -44,7 +53,7 @@ createApp({
             } else {
 
                 this.invalidFormEntry = true
-                
+
             }
 
         },
@@ -57,7 +66,7 @@ createApp({
 
         toggleTaskStatus(index) {
             this.tasks[index].taskDone = !this.tasks[index].taskDone
-            
+
         }
 
     },

@@ -1,3 +1,10 @@
+:root {
+    --primary-color:rgb(56, 94, 94);
+    --secondary-color:rgb(180, 180, 180);
+    --secondary-hover:rgb(136, 136, 136);
+    --warning-color:rgb(255, 118, 118);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -21,7 +28,7 @@ html {
 }
 
 .todo-list {
-    border: 8px solid rgb(56, 94, 94);
+    border: 8px solid var(--primary-color);
     border-radius: 50px;
     padding: 30px;
     box-shadow: 20px 30px 50px rgba(28, 28, 31, 0.26);
@@ -32,7 +39,7 @@ html {
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
-    color: rgb(56, 94, 94);
+    color: var(--primary-color);
 }
 
 .todo-list h3 {
@@ -40,9 +47,9 @@ html {
 }
 
 .todo-list li {
-    border: 2px solid rgb(180, 180, 180);
+    border: 2px solid var(--secondary-color);
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 10px 20px 20px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -51,11 +58,11 @@ html {
 
 .todo-list li span {
     cursor: pointer;
-    color: rgb(177, 84, 84);
+    color: var(--warning-color)
 }
 
 .todo-list li:hover {
-    border: 2px solid rgb(118, 128, 123);
+    border: 2px solid var(--secondary-hover);
 }
 
 .todo-list li span:hover {
@@ -67,41 +74,52 @@ html {
 }
 
 .task-input {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    position: relative;
 }
 
-.task-input * {
+.task-input-form,
+.task-input-button {
     padding: 10px 20px;
-    border: 1px solid grey;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     transition: 200ms all;
     flex-grow: 1;
     min-width: 0;
 }
 
-.task-input-form {    
+.invalid-text {
+    position: absolute;
+    top: 110%;
+    left: 18px;
+    font-size: 12px;
+    color: var(--warning-color);
+}
+
+
+.task-input-form {
     outline: 2px solid transparent;
 }
 
 .task-input-form:focus-visible {
-    outline: 2px solid rgb(77, 141, 141);
+    outline: 2px solid var(--primary-color);
 }
 
-.task-input-button {   
+.task-input-button {
     cursor: pointer;
     background-color: rgb(255, 255, 255);
 
 }
 
 .task-input-button:hover {
-    background-color: rgb(56, 94, 94);
+    background-color: var(--secondary-color);
     color: white;
-    border-color: currentColor;
+    border-color: var(--primary-color)
 }
 
 .task-input-form.invalid {
-    outline: 2px solid rgb(206, 29, 29);
+    outline: 2px solid var(--warning-color);
 }

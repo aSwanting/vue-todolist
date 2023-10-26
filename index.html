@@ -22,13 +22,17 @@
                 <h1>ToDo List</h1>
 
                 <div class="task-input">
-                    <input class="task-input-form" :class="{'invalid': invalidFormEntry}" type="text" placeholder="New Task" v-model="newTaskName" @keydown.enter="addTask(newTaskName)">
+                    <input class="task-input-form" :class="{'invalid': invalidFormEntry}" type="text"
+                        placeholder="New Task" v-model="newTaskName" @keydown.enter="addTask(newTaskName)">
                     <button class="task-input-button" @click="addTask(newTaskName)">add</button>
+                    <p class="invalid-text" v-show="invalidFormEntry">Task must be at least 5 characters</p>
                 </div>
+
 
                 <ul v-if="tasks.length > 0">
 
-                    <li v-for="(task, index) in tasks" :key="task.taskName" :class="{'task-done': task.taskDone}" @click="toggleTaskStatus(index)">
+                    <li v-for="(task, index) in tasks" :key="task.taskName" :class="{'task-done': task.taskDone}"
+                        @click="toggleTaskStatus(index)">
                         {{task.taskName}}
                         <span @click.stop="removeTask(index)"><i class="fa-regular fa-circle-xmark"></i></span>
                     </li>
