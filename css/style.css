@@ -74,11 +74,11 @@ html {
 }
 
 .task-input {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    position: relative;
+    gap: 25px;
+    
 }
 
 .task-input-form,
@@ -99,9 +99,15 @@ html {
     color: var(--warning-color);
 }
 
+.input-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
 
 .task-input-form {
     outline: 2px solid transparent;
+    width: 100%;
+    
 }
 
 .task-input-form:focus-visible {
